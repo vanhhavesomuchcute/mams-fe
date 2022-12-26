@@ -7,4 +7,6 @@ export class Motorbike {
   salePrice: number;
   motorbikeTypeId: number;
   brandId: number;
+  createTime: string;
+  updateTime: string;
 }

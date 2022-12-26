@@ -1,0 +1,81 @@
+<div class="modal-header">
+  <h2 class="modal-title" id="exampleModalLabel">Add motorbike</h2>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="modalRef.close()"
+  ></button>
+</div>
+
+<div class="modal-body">
+  <form
+    novalidate
+    (ngSubmit)="onSubmit()"
+    [formGroup]="addMotorbikeForm"
+    class="row justify-content-md-center"
+  >
+    <div class="col-md-8">
+      <div class="form-group row">
+        <label for="example-text-input" class=" col-form-label">
+          Name
+        </label>
+        <div class="col-10">
+          <input class="form-control" type="text" id="example-text-input" formControlName="name"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-email-input" class=" col-form-label">
+          Description
+        </label>
+        <div class="col-10">
+          <input class="form-control" type="email" id="example-email-input" formControlName="description">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-url-fb" class="col-form-label">
+          Import Price
+        </label>
+        <div class="col-10">
+          <input class="form-control" type="url" id="example-url-fb" formControlName="importPrice"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-url-twt" class="col-form-label">
+          Sale Price
+        </label>
+        <div class="col-10">
+          <input class="form-control" type="url" id="example-url-twt" formControlName="salePrice"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-url-web" class=" col-form-label">
+          Brand
+        </label>
+        <div class="col-10">
+          <input class="form-control" type="url" id="example-url-web" formControlName="brand"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-tel-input" class="col-form-label">
+          Image
+        </label>
+        <div class="col-10 mb-4">
+          <input class="form-control" type="tel" id="example-tel-input" formControlName="image"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-1">
+          <button type="button" class="btn btn-secondary me-4" (click)="modalRef.close()">
+            Close
+          </button>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- <div class="modal-footer">
+
+</div> -->

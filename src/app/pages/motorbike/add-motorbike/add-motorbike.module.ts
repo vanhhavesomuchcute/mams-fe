@@ -1,24 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MotorbikeComponent } from './motorbike.component';
-import { ModalsModule, WidgetsModule } from '../../_metronic/partials';
+import { AddMotorbikeComponent } from './add-motorbike.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 @NgModule({
-  declarations: [MotorbikeComponent],
+  declarations: [AddMotorbikeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: MotorbikeComponent,
+        component: AddMotorbikeComponent,
       },
     ]),
-    WidgetsModule,
-    ModalsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule 
   ],
 })
-export class MotorbikeModule {}
+export class AddMotorbikeModule {}
