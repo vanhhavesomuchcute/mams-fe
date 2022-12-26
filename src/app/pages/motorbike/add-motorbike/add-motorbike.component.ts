@@ -8,6 +8,7 @@ import { ReactiveFormsModule, FormControl, FormGroup, Validators} from '@angular
   templateUrl: './add-motorbike.component.html'
 })
 export class AddMotorbikeComponent implements OnInit {
+  addMotorbikeForm: FormGroup;
   motorbike: Motorbike = {
     id: 0,
     name: '',
@@ -20,7 +21,6 @@ export class AddMotorbikeComponent implements OnInit {
     createTime: '',
     updateTime: ''
   };
-  addMotorbikeForm: FormGroup;
 
   constructor(public modalRef: MdbModalRef<AddMotorbikeComponent>) {}
 
@@ -28,9 +28,9 @@ export class AddMotorbikeComponent implements OnInit {
     this.addMotorbikeForm = new FormGroup({
       name : new FormControl('', [Validators.required]),
       description : new FormControl('', ),
-      importPrice : new FormControl('', ),
-      salePrice : new FormControl('', ),
-      brand : new FormControl('', ),
+      importPrice : new FormControl('', [Validators.required]),
+      salePrice : new FormControl('', [Validators.required]),
+      brand : new FormControl('', [Validators.required]),
       image : new FormControl('', )
     })
   }
